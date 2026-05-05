@@ -1,5 +1,6 @@
+import 'package:app_escolar/conceitos_basicos.dart';
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+
 
 void main() {
   runApp(const AppEscolar());
@@ -16,7 +17,7 @@ class AppEscolar extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: ConceitosBasicos(),
       debugShowCheckedModeBanner: false,
     );
   }

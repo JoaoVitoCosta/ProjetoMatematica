@@ -14,7 +14,7 @@ class _QuizScreenState extends State<QuizScreen> {
   bool respondeu = false;
   String? respostaSelecionada;
 
-  // Questões do quiz
+  
   final List<Map<String, dynamic>> questoes = [
     {
       'pergunta': 'Quanto é 15 + 27?',
@@ -130,10 +130,10 @@ class _QuizScreenState extends State<QuizScreen> {
             ElevatedButton(
               onPressed: _novaPergunta,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue[600],
+                backgroundColor: Color.fromARGB(255, 230, 75, 4),
                 padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
               ),
-              child: const Text('Novo Quiz', style: TextStyle(fontSize: 20)),
+              child: const Text('Novo Quiz', style: TextStyle(fontSize: 20, color: Colors.white)),
             ),
           ],
         ),
@@ -146,7 +146,7 @@ class _QuizScreenState extends State<QuizScreen> {
       padding: const EdgeInsets.all(30),
       child: Column(
         children: [
-          // Barra de progresso
+        
           LinearProgressIndicator(
             value: (perguntaAtual + 1) / questoes.length,
             backgroundColor: Colors.grey[300],
@@ -154,7 +154,7 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
           const SizedBox(height: 30),
           
-          // Pergunta
+        
           Text(
             '${perguntaAtual + 1}/${questoes.length}',
             style: TextStyle(fontSize: 18, color: Colors.grey[600]),
@@ -167,7 +167,7 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
           const SizedBox(height: 40),
           
-          // Opções
+        
           ...List.generate(4, (i) => _opcao(i, questao['opcoes'][i])),
         ],
       ),

@@ -25,7 +25,7 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
           double num1 = double.parse(_valor1);
           double num2 = double.parse(_tela);
 
-          // ✅ DIVISÃO POR ZERO PROTEGIDA
+        
           if (_operador == "÷" && num2 == 0) {
             _tela = "ERRO!";
             return;
@@ -75,7 +75,7 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // TELA
+        
         Expanded(
           child: Container(
             alignment: Alignment.centerRight,
@@ -86,13 +86,13 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
             ),
           ),
         ),
-        // BOTÕES
+        
         Column(
           children: [
-            Row(children: [_botao("C", cor: Colors.red), _botao("÷", cor: Colors.orange)]),
-            Row(children: [_botao("7"), _botao("8"), _botao("9"), _botao("×", cor: Colors.orange)]),
-            Row(children: [_botao("4"), _botao("5"), _botao("6"), _botao("−", cor: Colors.orange)]),
-            Row(children: [_botao("1"), _botao("2"), _botao("3"), _botao("+", cor: Colors.orange)]),
+            Row(children: [_botao("C", cor: Colors.blueGrey), _botao("÷", cor: const Color.fromARGB(255, 0, 149, 255))]),
+            Row(children: [_botao("7"), _botao("8"), _botao("9"), _botao("×", cor: const Color.fromARGB(255, 0, 149, 255))]),
+            Row(children: [_botao("4"), _botao("5"), _botao("6"), _botao("−", cor: const Color.fromARGB(255, 0, 149, 255))]),
+            Row(children: [_botao("1"), _botao("2"), _botao("3"), _botao("+", cor: const Color.fromARGB(255, 0, 149, 255))]),
             Row(children: [
               Expanded(flex: 2, child: _botao("0")),
               _botao("."),

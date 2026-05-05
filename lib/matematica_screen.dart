@@ -14,7 +14,7 @@ class _MatematicaScreenState extends State<MatematicaScreen> {
   String _operator = "";
   bool _isNewOperation = true;
 
-  // Botão para números
+  // botoes para os números 
   Widget btnNumber(String label, {Color? color}) {
     return Expanded(
       child: Container(
@@ -40,7 +40,7 @@ class _MatematicaScreenState extends State<MatematicaScreen> {
     );
   }
 
-  // Botão para operações
+  // Botão das operações
   Widget btnOperator(String label, {Color? color}) {
     return Expanded(
       child: Container(
@@ -66,7 +66,7 @@ class _MatematicaScreenState extends State<MatematicaScreen> {
     );
   }
 
-  // Botão limpar
+  // Para limpar
   Widget btnClear() {
     return Expanded(
       child: Container(
@@ -92,7 +92,7 @@ class _MatematicaScreenState extends State<MatematicaScreen> {
     );
   }
 
-  // Botão resultado
+  // Resultado botão
   Widget btnResult() {
     return Expanded(
       child: Container(
@@ -121,14 +121,14 @@ class _MatematicaScreenState extends State<MatematicaScreen> {
   void buttonPressed(String buttonText) {
     setState(() {
       if (buttonText == "C") {
-        // Limpar tudo
+        // Limpa tudo
         _output = "0";
         _value = "0";
         _operand = "";
         _operator = "";
         _isNewOperation = true;
       } else if (buttonText == "+/-") {
-        // Trocar sinal
+        // Troca de sinal
         if (_output.startsWith("-")) {
           _output = _output.substring(1);
         } else {
@@ -152,7 +152,7 @@ class _MatematicaScreenState extends State<MatematicaScreen> {
           double num1 = double.parse(_operand);
           double num2 = double.parse(_output);
 
-          // **VALIDAÇÃO OBRIGATÓRIA: DIVISÃO POR ZERO**
+          // Validação se a divisão por zero
           if (_operator == "÷" && num2 == 0) {
             _output = "ERRO: Divisão por zero!";
             _operator = "";

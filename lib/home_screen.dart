@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_titulos[_selectedIndex]),
-        backgroundColor: Colors.blue[600],
+        backgroundColor: const Color.fromARGB(255, 230, 75, 4),
         foregroundColor: Colors.white,
       ),
       body: _telas[_selectedIndex],
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue[600],
+        selectedItemColor: const Color.fromARGB(255, 225, 89, 4),
         onTap: _onItemTapped,
       ),
     );
