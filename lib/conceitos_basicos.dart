@@ -47,8 +47,8 @@ class ConceitosBasicos extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => HomeScreen()),
                   );
                 },
-                icon: const Icon(Icons.calculate),
-                label: const Text('Ir para a calculadora'),
+                icon: const Icon(Icons.calculate, color: Colors.white),
+                label: const Text('Ir para a calculadora', style: TextStyle(color: Colors.white),),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 230, 75, 4),
                   padding: const EdgeInsets.symmetric(
